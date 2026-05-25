@@ -1,0 +1,12 @@
+# Task to create directory '/tmp/new_directory'
+
+- name: Create Directory
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+  - name: Create /tmp/new_directory in localhost
+    file:
+      path: /tmp/new_directory
+      state: directory
+      mode: 0777
