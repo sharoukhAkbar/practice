@@ -2,10 +2,10 @@ provider "azurerm" {
   features {}
   skip_provider_registration = true
 
-  tenant_id       = "00000000-0000-0000-0000-000000000000"
-  subscription_id = "00000000-0000-0000-0000-000000000000"
-  client_id       = "mock"
-  client_secret   = "mock"
+  tenant_id       = var.az_tenant_id
+  subscription_id = var.az_subscription_id
+  client_id       = var.az_client_id
+  client_secret   = var.az_client_secret
 }
 
 terraform {
