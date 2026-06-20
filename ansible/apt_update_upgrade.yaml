@@ -1,4 +1,5 @@
 ---
+# Write a Task to update and updgrade apt packages
 
 - name: 'apt package maintenance'
   hosts: localhost
@@ -6,12 +7,9 @@
   gather_facts: false
 
   tasks:
-    - name: 'Update apt packages'
+    - name: 'Update and Upgrade apt packages'
       apt:
         update_cache: true
-
-    - name: 'Upgrade apt packages'
-      apt:
         upgrade: yes
         state: latest
 
